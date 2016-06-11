@@ -3,8 +3,8 @@ build:
 export:
 	docker push aurelbruno06/hadoop_base
 	docker push aurelbruno06/consul_base
-	docker push aurelbruno06/hadoop/consul_server
-	docker push aurelbruno06/hadoop/master
-	docker push aurelbruno06/hadoop/worker
-	docker push aurelbruno06/hadoop/job
+	docker push aurelbruno06/hadoop_consul_server
+	docker push aurelbruno06/hadoop_master
+	docker push aurelbruno06/hadoop_worker
+	docker push aurelbruno06/hadoop_job
 
