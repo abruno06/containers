@@ -7,7 +7,7 @@ import org.apache.hadoop.mapreduce.Job;
 public class WordCountDriver {
 public static void main(String[] args) throws Exception {
 if (args.length != 2) {
-System.out.printf("Format de la ligne de commande : WordCount <input dir> <outputdir>\n");
+System.out.printf("Usage : WordCountDriver <inputdir> <outputdir>\n");
 System.exit(-1);
 }
 Job job = new Job();
