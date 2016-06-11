@@ -31,4 +31,4 @@ This directory contains all container to make a docker based hadoop cluster for 
  - make a compose file for swarm cluster using vxlan
  - better consul integration
  - allow worker scale down and cleaning in the HDFS
- - make HDFS volume to be permanant
+ - make HDFS volume to be permanent
