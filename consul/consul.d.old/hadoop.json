@@ -1,0 +1,1 @@
+{"service": {"name": "hadoop", "tags": ["namenode"], "port": 9000}}

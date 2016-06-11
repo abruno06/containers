@@ -1,0 +1,5 @@
+{"service":
+ {"name": "namenode", 
+  "tags": ["namenode"]
+ }
+}

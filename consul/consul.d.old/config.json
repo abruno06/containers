@@ -1,0 +1,12 @@
+{
+    "bootstrap": true,
+    "server": true,
+    "datacenter": "hadoop",
+    "bootstrap_expect": 3,
+    "data_dir": "/var/consul",
+    "encrypt": "kj4AKc5f3PSHys3yxcVe0A==",
+    "log_level": "DEBUG",
+    "ui_dir": "/etc/consul",
+    "client_addr": "0.0.0.0",
+    "ui": true
+}

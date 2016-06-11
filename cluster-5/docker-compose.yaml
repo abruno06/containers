@@ -1,0 +1,44 @@
+version: '2'
+services:
+  consul1:
+    image: aurelbruno06/hadoop/consul_server
+    networks:
+    - hadoop-ring
+    ports:
+    - 8500:8500
+  consul2:
+    image: aurelbruno06/hadoop/consul_server
+    networks:
+    - hadoop-ring
+  consul3:
+    image: aurelbruno06/hadoop/consul_server
+    networks:
+    - hadoop-ring
+  master:
+    image: aurelbruno06/hadoop/master
+    networks:
+    - hadoop-ring
+    - hadoop-access
+    links: 
+    - consul1
+    - consul2
+    - consul3
+    ports:
+    - 50070:50070
+    - 8088:8088
+    - 8082:8082
+  worker:
+    image: aurelbruno06/hadoop/worker
+    networks:
+    - hadoop-ring
+    links:
+    - master
+    - consul1
+    - consul2
+    - consul3
+networks:
+  hadoop-access:
+    driver: bridge
+  hadoop-ring:
+    driver: bridge
+

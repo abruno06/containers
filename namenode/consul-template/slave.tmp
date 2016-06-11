@@ -1,0 +1,2 @@
+{{range service "hadoop"}}
+{{.Node}}{{end}}

@@ -1,0 +1,9 @@
+{
+    "bootstrap": false,
+    "server": false,
+    "datacenter": "hadoop",
+    "data_dir": "/var/consul",
+    "encrypt": "kj4AKc5f3PSHys3yxcVe0A==",
+    "log_level": "INFO",
+    "start_join": ["consul1","consul2","consul3"]
+}
