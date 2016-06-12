@@ -2,10 +2,12 @@
 * this is an example 
 
     start the image after your cluster is running
+
 ```Shell
 docker run -it --rm --net cluster-5_hadoop-ring --link master --entrypoint '/bin/bash' aurelbruno06/hadoop_job
 ```
     inside the image
+
 ```Shell
 sed s/HOSTNAME/master/ /usr/local/hadoop/etc/hadoop/core-site.xml.tmp > /usr/local/hadoop/etc/hadoop/core-site.xml
 hadoop fs -mkdir /data
