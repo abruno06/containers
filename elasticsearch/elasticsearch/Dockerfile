@@ -1,7 +1,7 @@
 FROM aurelbruno06/jdk:1.8
 MAINTAINER Aurelien Bruno <aurelbruno06@gmail.com>
 #ENV ES_VERSION 2.3.3
-ENV ES_VERSION 5.0.1
+ENV ES_VERSION 5.1.2
 # modify Dockerfile from the official one to allow cluster building
 # Need gosu to make it work
 ENV GOSU_VERSION 1.8
@@ -28,8 +28,8 @@ ENV RACK_ENV_VAR rack1
 ENV VERSION 1.0.12
 RUN echo $VERSION > /tmp/version
 
-#RUN groupadd -r elasticsearch && useradd -r --create-home --home-dir $HOME -g elasticsearch elasticsearch
-#RUN mkdir /home/elasticsearch && chown elasticsearch:elasticsearch /home/elasticsearch
+RUN groupadd -r elasticsearch && useradd -r --create-home --home-dir $HOME -g elasticsearch elasticsearch
+RUN mkdir /home/elasticsearch && chown elasticsearch:elasticsearch /home/elasticsearch
 
 ENV PATH /usr/share/elasticsearch/bin:$PATH
 WORKDIR /usr/share/elasticsearch

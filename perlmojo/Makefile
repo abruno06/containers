@@ -1,8 +1,6 @@
-APPNAME ?= "aurelbruno06/elasticsearch"
+APPNAME ?= "aurelbruno06/perlmojo"
 build:
 	docker build -t $(APPNAME) .
 
 export:
 	docker push $(APPNAME)
-
-
