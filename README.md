@@ -12,4 +12,5 @@ container can be found:
   - is a container with alasticsearch capability
 * curl-client: (no container)
   - is an Alpine container with curl installed on it that can be used to run curl in a container
-
+* perlmojo:
+  - is a ubuntu:16.04 based container allowing to build and run Perl Mojolious application
