@@ -8,4 +8,8 @@ container can be found:
   - contain Dockerfiles and Compose to build a Hadoop Based container
 * jdk:
   - is a container with based from ubuntu:16.04 that contain openjdk 1.7
+* elasticsearch: (no container)
+  - is a container with alasticsearch capability
+* curl-client: (no container)
+  - is an Alpine container with curl installed on it that can be used to run curl in a container
 
