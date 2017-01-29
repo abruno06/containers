@@ -8,7 +8,7 @@ container can be found:
 more detail on the project here :
 http://www.mojolicious.org/
 
-* Create an application
+## Create an application
 
 start a container using
 ```
@@ -58,7 +58,7 @@ BEGIN {unshift @INC, "$FindBin::Bin/../lib"}
 
 
 
-* Package and run an application as a standalone container
+## Package and run an application as a standalone container
 
 create the following Dockerfile on the <localdirectory>
 
