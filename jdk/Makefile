@@ -1,2 +1,2 @@
 build:
-	docker build -t aurelbruno06/jdk:1.7 .
+	docker build -t aurelbruno06/jdk:1.8 .

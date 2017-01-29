@@ -1,6 +1,7 @@
-FROM aurelbruno06/jdk:1.7
+FROM aurelbruno06/jdk:1.8
 MAINTAINER Aurelien Bruno <aurelbruno06@gmail.com>
-ENV ES_VERSION 2.3.3
+#ENV ES_VERSION 2.3.3
+ENV ES_VERSION 5.0.1
 # modify Dockerfile from the official one to allow cluster building
 # Need gosu to make it work
 ENV GOSU_VERSION 1.8
@@ -14,7 +15,8 @@ RUN set -x \
 	&& chmod +x /usr/local/bin/gosu \
 && gosu nobody true
 
-RUN wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/${ES_VERSION}/elasticsearch-${ES_VERSION}.deb  && dpkg -i elasticsearch-${ES_VERSION}.deb && rm elasticsearch-${ES_VERSION}.deb
+#RUN wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/${ES_VERSION}/elasticsearch-${ES_VERSION}.deb  && dpkg -i elasticsearch-${ES_VERSION}.deb && rm elasticsearch-${ES_VERSION}.deb
+RUN wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-${ES_VERSION}.deb
 
 ENV CLUSTER_NAME "demo"
 ENV NODE_NAME "node1"
